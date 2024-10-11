@@ -1,0 +1,38 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header, footer {
+  background-color: #004c97;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+main {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h1, h2 {
+  margin: 0;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+p {
+  line-height: 1.6;
+}
+
+#tourism-map, #tourism-chart {
+  margin: 0 auto;
+}
