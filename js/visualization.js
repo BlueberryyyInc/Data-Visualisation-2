@@ -4,7 +4,7 @@ var mapSpec = {
   "width": 600,
   "height": 400,
   "data": {
-    "url": "data/australia-states.geojson",
+    "url": "https://raw.githubusercontent.com/BlueberryyyInc/Data-Visualisation-2/refs/heads/master/data/australian-states.geojson",
     "format": {
       "type": "geojson"
     }
@@ -14,7 +14,7 @@ var mapSpec = {
       "lookup": "properties.STATE_NAME",
       "from": {
         "data": {
-          "url": "data/tourism_data.csv"
+          "url": "https://raw.githubusercontent.com/BlueberryyyInc/Data-Visualisation-2/refs/heads/master/data/tourism_data.csv"
         },
         "key": "State",
         "fields": ["Tourist_Count"]
@@ -56,7 +56,7 @@ var chartSpec = {
   "width": 600,
   "height": 300,
   "data": {
-    "url": "data/tourism_over_time.csv"
+    "url": "https://raw.githubusercontent.com/BlueberryyyInc/Data-Visualisation-2/refs/heads/master/data/tourism_over_time.csv""
   },
   "mark": "line",
   "encoding": {
