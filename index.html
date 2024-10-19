@@ -2,41 +2,112 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Australian Tourism Trends</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Exploring Australian Tourism Trends (2014-2024)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: navy;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+    header p {
+      margin: 5px 0 20px;
+      font-size: 18px;
+    }
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    section {
+      margin-bottom: 50px;
+    }
+    h2 {
+      font-size: 28px;
+      color: navy;
+      margin-bottom: 10px;
+    }
+    .chart-container {
+      margin: 0 auto;
+      text-align: center;
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+    footer p {
+      margin: 0;
+    }
+  </style>
   <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
-  
 </head>
 <body>
-  <header>
-  <h1>Exploring Australian Tourism Trends</h1>
-  <p>An interactive visualization of tourism data in Australia.</p>
+
+<header>
+  <h1>Exploring Australian Tourism Trends (2014-2024)</h1>
+  <p>An analysis of tourist movement, reasons for visits, and distribution across states</p>
 </header>
 
 <main>
-  <section id="map">
-    <h2>Tourist Arrivals by State</h2>
-	<p>The map below shows the number of tourists in each Australian state. Darker colors indicate higher numbers of tourists. You can hover over a state on the map to see the specific tourist count.</p>
-    <div id="tourism-map"></div>
+  <!-- Section 1: Tourist Distribution by State -->
+  <section>
+    <h2>Tourist Distribution by State (2014-2024)</h2>
+    <div id="tourist-map" class="chart-container"></div>
   </section>
 
-  <section id="chart">
-    <h2>International Tourists Over Time</h2>
-	<p>The line chart below displays the changes in international tourist numbers in Australia from 2015 to 2022. By observing this chart, you can understand the development of the tourism industry and the impact of external factors (like global events) on tourist numbers.</p>
-    <div id="tourism-chart"></div>
+  <!-- Section 2: Grouped Bar Chart - Tourist Comparison by State and Year -->
+  <section>
+    <h2>Grouped Bar Chart: Tourist Comparison by State and Year</h2>
+    <div id="grouped-bar-chart" class="chart-container"></div>
   </section>
-  
+
+  <!-- Section 3: Heatmaps -->
+  <section>
+    <h2>Heatmap: Reasons for Visiting Australia</h2>
+    <div id="heatmap-reasons" class="chart-container"></div>
+  </section>
+
+  <section>
+    <h2>Heatmap: State-Based Tourist Data</h2>
+    <div id="heatmap-states" class="chart-container"></div>
+  </section>
+
+  <!-- Section 4: Pie Chart - Movement Categories -->
+  <section>
+    <h2>Pie Chart: Movement Categories by Year</h2>
+    <div id="pie-chart" class="chart-container"></div>
+  </section>
 </main>
 
 <footer>
-  <p>Data Source: Australian Bureau of Statistics</p>
-  <p>Author: Keyang Zhang, Date: 11/10/2024</p>
+  <p>Data Source: https://www.abs.gov.au/statistics/industry/tourism-and-transport/overseas-arrivals-and-departures-australia/aug-2024</p>
+  <p>&copy; 2024 Keyang Zhang</p>
 </footer>
- <script src="js/visualization.js"></script>
-</body>
 
+<!-- JS files loading from your GitHub repository -->
+<script src="https://raw.githubusercontent.com/BlueberryyyInc/Data-Visualisation-2/master/js/map1.js"></script>
+<script src="https://raw.githubusercontent.com/BlueberryyyInc/Data-Visualisation-2/master/js/barchart.js"></script>
+<script src="https://raw.githubusercontent.com/BlueberryyyInc/Data-Visualisation-2/master/js/heatmap1.js"></script>
+<script src="https://raw.githubusercontent.com/BlueberryyyInc/Data-Visualisation-2/master/js/heatmap2.js"></script>
+<script src="https://raw.githubusercontent.com/BlueberryyyInc/Data-Visualisation-2/master/js/piechart.js"></script>
+<script src="https://raw.githubusercontent.com/BlueberryyyInc/Data-Visualisation-2/master/js/visualization.js"></script>
+
+</body>
 </html>
