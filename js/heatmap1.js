@@ -1,4 +1,4 @@
-vegaEmbed('#heatmap-reasons',{
+var mapSpec =  {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Heatmap showing reasons for visiting Australia from 2014-2024.",
   "data": {
@@ -32,5 +32,7 @@ vegaEmbed('#heatmap-reasons',{
       "labelFontSize": 12,
       "titleFontSize": 14
     }
-  }
+  };
+vegaEmbed('#heatmap-reasons', mapSpec).then(function(result) {
+  
 }).catch(console.error);
