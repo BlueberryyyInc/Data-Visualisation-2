@@ -1,4 +1,4 @@
-vegaEmbed('#grouped-bar-chart', {
+var chartSpec = { {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Grouped Bar Chart: Tourist Comparison by State and Year",
@@ -81,4 +81,7 @@ vegaEmbed('#grouped-bar-chart', {
       "titleFontSize": 14
     }
   }
+};
+vegaEmbed('##grouped-bar-chart', chartSpec).then(function(result) {
+  
 }).catch(console.error);
