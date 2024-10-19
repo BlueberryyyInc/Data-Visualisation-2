@@ -14,16 +14,35 @@
       "type": "csv"
     }
   },
+  "params": [
+    {
+      "name": "year_select",
+      "value": "All",
+      "bind": {
+        "input": "select",
+        "options": ["All", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"],
+        "labels": ["All", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"],
+        "name": "Select Year: "
+      }
+    }
+  ],
   "transform": [
     {
       "filter": "datum.State != null && datum.State != ''"
+    },
+    {
+      "filter": "year_select == 'All' || datum.Year == +year_select"
+    },
+    {
+      "calculate": "year_select == 'All' ? datum.Year : datum.State",
+      "as": "ColorField"
     }
   ],
   "mark": {
     "type": "bar",
     "tooltip": true,
     "cornerRadiusEnd": 2,
-    "size": 15  // Adjust bar width for better clarity
+    "size": 10
   },
   "encoding": {
     "x": {
@@ -34,44 +53,33 @@
         "title": "State"
       }
     },
+    "xOffset": {
+      "field": "Year",
+      "type": "ordinal"
+    },
     "y": {
       "field": "Total",
       "type": "quantitative",
       "title": "Tourist Count"
     },
     "color": {
-      "field": "Year",
+      "field": "ColorField",
       "type": "nominal",
       "scale": {
-        "scheme": "category10"
+        "scheme": "category20"
       },
-      "title": "Year"
+      "title": "Color"
     },
     "tooltip": [
-      {"field": "State", "title": "State"},
-      {"field": "Year", "title": "Year"},
-      {"field": "Total", "title": "Tourist Count", "format": ","}  // Add commas for better readability
+      { "field": "State", "title": "State" },
+      { "field": "Year", "title": "Year" },
+      {
+        "field": "Total",
+        "title": "Tourist Count",
+        "format": ","
+      }
     ]
   },
-  "selection": {
-    "year_select": {
-      "type": "single",
-      "fields": ["Year"],
-      "bind": {
-        "input": "select",  // Use a dropdown for year selection
-        "options": [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
-        "name": "Select Year: "
-      }
-    }
-  },
-  "transform": [
-    {
-      "filter": {
-        "param": "year_select",  // Apply the filter for the selected year
-        "empty": false
-      }
-    }
-  ],
   "config": {
     "view": {
       "stroke": "transparent"
@@ -82,3 +90,5 @@
     }
   }
 }
+
+
