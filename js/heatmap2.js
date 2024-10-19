@@ -1,4 +1,4 @@
-vegaEmbed('#heatmap-states',{
+var mapSpec =  {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Heatmap showing state-based tourist data from 2014-2024.",
   "data": {
@@ -32,5 +32,6 @@ vegaEmbed('#heatmap-states',{
       "labelFontSize": 12,
       "titleFontSize": 14
     }
-  }
+  };
+  vegaEmbed('#heatmap-states', mapSpec).then(function(result) {
 }).catch(console.error);
