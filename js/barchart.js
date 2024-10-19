@@ -83,5 +83,8 @@ var chartSpec =  {
   }
 };
 vegaEmbed('#grouped-bar-chart', chartSpec).then(function(result) {
+  console.log("Chart rendered successfully:", result);
+}).catch(function(error) {
+  console.error("Error rendering chart:", error);
+});
   
-}).catch(console.error);
