@@ -1,4 +1,4 @@
-vegaEmbed('#tourist-map', {
+vegaEmbed('#grouped-bar-chart', {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Grouped Bar Chart: Tourist Comparison by State and Year",
