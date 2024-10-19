@@ -1,4 +1,4 @@
-{
+vegaEmbed('#tourist-map', {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Grouped Bar Chart: Tourist Comparison by State and Year",
@@ -81,4 +81,4 @@
       "titleFontSize": 14
     }
   }
-}
+}).catch(console.error);
