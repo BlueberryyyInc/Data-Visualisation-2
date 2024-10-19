@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Pie chart showing movement categories with a year filter and improved styling.",
   "data": {
-    "url": "https://raw.githubusercontent.com/BlueberryyyInc/Data-Visualisation-2/master/data/Pie_chart.csv",
+    "url": "https://BlueberryyyInc.github.io/Data-Visualisation-2/data/Pie_chart.csv",
     "format": {
       "type": "csv"
     }
@@ -10,17 +10,18 @@
   "params": [
     {
       "name": "YearSelector",
-      "value": 2014,
+      "value": "All",
       "bind": {
         "input": "select",
-        "options": [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+        "options": ["All", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"],
+        "labels": ["All", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"],
         "name": "Select Year: "
       }
     }
   ],
   "transform": [
     {
-      "filter": "datum.Year == YearSelector"
+      "filter": "YearSelector == 'All' || datum.Year == +YearSelector"
     },
     {
       "lookup": "Category",
@@ -38,12 +39,22 @@
         "key": "Category",
         "fields": ["Simplified"]
       }
+    },
+    {
+      "aggregate": [
+        {
+          "op": "sum",
+          "field": "Value",
+          "as": "Total"
+        }
+      ],
+      "groupby": ["Simplified"]
     }
   ],
   "mark": "arc",
   "encoding": {
     "theta": {
-      "field": "Value",
+      "field": "Total",
       "type": "quantitative",
       "title": "Total Arrivals"
     },
@@ -52,7 +63,7 @@
       "type": "nominal",
       "title": "Movement Category",
       "scale": {
-        "scheme": "category20"  // Improved color scheme
+        "scheme": "category10"  
       }
     },
     "tooltip": [
@@ -62,7 +73,7 @@
         "title": "Category"
       },
       {
-        "field": "Value",
+        "field": "Total",
         "type": "quantitative",
         "title": "Total Arrivals"
       }
@@ -72,7 +83,7 @@
     "legend": {
       "titleFontSize": 14,
       "labelFontSize": 12,
-      "symbolSize": 150  // Increase legend symbol size for better visibility
+      "symbolSize": 150
     },
     "view": {
       "stroke": null
