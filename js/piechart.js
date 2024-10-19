@@ -1,4 +1,4 @@
-vegaEmbed('#pie-chart', {
+var chartSpec =  {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Pie chart showing movement categories with a year filter and improved styling.",
   "data": {
@@ -77,5 +77,6 @@ vegaEmbed('#pie-chart', {
     "view": {
       "stroke": null
     }
-  }
+  };
+vegaEmbed('#pie-chart', chartSpec).then(function(result) {
 }).catch(console.error);
