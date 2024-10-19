@@ -1,4 +1,4 @@
-{
+vegaEmbed('#tourist-map',{
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Tourist Distribution by State (2014-2024)",
@@ -137,4 +137,4 @@
     "direction": "vertical"
   },
   "autosize": { "type": "fit", "contains": "padding" }
-}
+}).catch(console.error);
