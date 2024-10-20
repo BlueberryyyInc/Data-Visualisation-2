@@ -27,72 +27,62 @@
 <main>
   <!-- Section 1: Tourist Distribution by State -->
   <section>
-    <div class="row">
-      <div class="chart">
-        <h2>Tourist Distribution by State (2014-2024)</h2>
-        <p>This map shows the distribution of tourists across Australian states from 2014 to 2024, visualizing regional trends over time. Larger circles represent higher numbers of tourists in a state, offering insights for tourism boards and policymakers.</p>
-        <div id="tourist-map" class="chart-container"></div>
-        <script type="text/javascript">
-          vegaEmbed("#tourist-map", "https://raw.githubusercontent.com/BlueberryyyInc/Data-Visualisation-2/master/js/map1.json");
-        </script>
-      </div>
-    </div>
+    <h2>Tourist Distribution by State (2014-2024)</h2>
+    <p class="description">
+      This map shows the distribution of tourists across Australian states from 2014 to 2024, <strong>highlighting regional differences</strong> in tourist numbers. Larger circles represent states with higher tourist arrivals, <strong>indicating the most popular destinations</strong> for both domestic and international visitors. <strong>NSW</strong> and <strong>Victoria</strong> stand out as top tourist magnets, suggesting that businesses and tourism boards in these states should continue to invest in infrastructure and marketing to support the growing demand. Meanwhile, states like <strong>Western Australia</strong> and the <strong>Northern Territory</strong> show smaller circles, suggesting <strong>untapped potential</strong> for tourism development. <strong>Policymakers</strong> can leverage this data to distribute resources effectively and focus on regions requiring further promotion.
+    </p>
+    <div id="tourist-map" class="chart-container"></div>
+    <script type="text/javascript">
+      vegaEmbed("#tourist-map", "https://raw.githubusercontent.com/BlueberryyyInc/Data-Visualisation-2/master/js/map1.json");
+    </script>
   </section>
 
-  <!-- Section 2: Grouped Bar Chart -->
+  <!-- Section 2: Grouped Bar Chart - Tourist Comparison by State and Year -->
   <section>
-    <div class="row">
-      <div class="chart">
-        <h2>Grouped Bar Chart: Tourist Comparison by State and Year</h2>
-        <p>This chart compares the number of tourists visiting various Australian states each year from 2014 to 2024. It provides valuable insights for businesses and local authorities to track state-wise trends and plan accordingly.</p>
-        <div id="grouped-bar-chart" class="chart-container"></div>
-        <script type="text/javascript">
-          vegaEmbed("#grouped-bar-chart", "https://raw.githubusercontent.com/BlueberryyyInc/Data-Visualisation-2/master/js/barchart.json");
-        </script>
-      </div>
-    </div>
+    <h2>Grouped Bar Chart: Tourist Comparison by State and Year</h2>
+    <p class="description">
+      This chart compares the number of tourists visiting various Australian states each year from 2014 to 2024. The clear rise in tourist counts in <strong>NSW</strong> and <strong>Victoria</strong> is evident, especially post-2018, highlighting these states as the <strong>leading destinations</strong> for visitors. However, <strong>Queensland</strong> has also shown a steady increase in tourist arrivals, potentially due to its attractive beaches and holiday destinations. <strong>For businesses</strong> operating in these regions, such as hotels and restaurants, understanding this growth can help them tailor their services and offerings to meet the evolving preferences of tourists. <strong>Tourism Boards</strong> can use this information to track changes and plan future promotions, while policymakers can focus on managing the impacts of tourism growth, particularly in high-traffic regions.
+    </p>
+    <div id="grouped-bar-chart" class="chart-container"></div>
+    <script type="text/javascript">
+      vegaEmbed("#grouped-bar-chart", "https://raw.githubusercontent.com/BlueberryyyInc/Data-Visualisation-2/master/js/barchart.json");
+    </script>
   </section>
 
-  <!-- Section 3: Heatmap - Reasons for Visiting -->
+  <!-- Section 3: Heatmap - Reasons for Visiting Australia -->
   <section>
-    <div class="row">
-      <div class="chart">
-        <h2>Heatmap: Reasons for Visiting Australia</h2>
-        <p>This heatmap displays the reasons tourists visited Australia, categorized by their length of stay, between 2014 and 2024. It provides insights into visitor motivations, helping businesses and tourism stakeholders tailor their offerings.</p>
-        <div id="heatmap-reasons" class="chart-container"></div>
-        <script type="text/javascript">
-          vegaEmbed("#heatmap-reasons", "https://raw.githubusercontent.com/BlueberryyyInc/Data-Visualisation-2/master/js/heatmap1.json");
-        </script>
-      </div>
-    </div>
+    <h2>Heatmap: Reasons for Visiting Australia</h2>
+    <p class="description">
+      This heatmap displays the reasons tourists visited Australia, categorized by their length of stay, from 2014 to 2024. <strong>Holiday travel</strong> stands out as the primary reason, showing a large number of visitors throughout the years, while <strong>business travel</strong> and <strong>education-related visits</strong> have also remained consistent, particularly in the years leading up to 2020. This information is invaluable for <strong>tourism stakeholders</strong> in creating tailored services and packages. For instance, the dominance of holidaymakers means that businesses can focus on <strong>leisure-based offerings</strong>, while the steady presence of business travelers suggests opportunities for <strong>premium services</strong> and <strong>conference facilities</strong>.
+    </p>
+    <div id="heatmap-reasons" class="chart-container"></div>
+    <script type="text/javascript">
+      vegaEmbed("#heatmap-reasons", "https://raw.githubusercontent.com/BlueberryyyInc/Data-Visualisation-2/master/js/heatmap1.json");
+    </script>
   </section>
 
   <!-- Section 4: Heatmap - State-Based Tourist Data -->
   <section>
-    <div class="row">
-      <div class="chart">
-        <h2>Heatmap: State-Based Tourist Data</h2>
-        <p>This heatmap shows the total number of tourists visiting each Australian state from 2014 to 2024. It helps policymakers and tourism boards identify tourism growth trends across regions.</p>
-        <div id="heatmap-states" class="chart-container"></div>
-        <script type="text/javascript">
-          vegaEmbed("#heatmap-states", "https://raw.githubusercontent.com/BlueberryyyInc/Data-Visualisation-2/master/js/heatmap2.json");
-        </script>
-      </div>
-    </div>
+    <h2>Heatmap: State-Based Tourist Data</h2>
+    <p class="description">
+      This heatmap shows the total number of tourists visiting each Australian state from 2014 to 2024. <strong>NSW</strong> consistently ranks as the top state for tourist arrivals, followed by <strong>Victoria</strong> and <strong>Queensland</strong>, demonstrating their strong appeal to visitors. However, <strong>smaller states like Tasmania</strong> and the <strong>Northern Territory</strong> show fewer tourist numbers, indicating areas for potential growth. This data is particularly useful for <strong>tourism boards</strong> looking to promote lesser-known destinations, and for <strong>policymakers</strong> to consider where further investment in infrastructure and marketing could stimulate visitor growth.
+    </p>
+    <div id="heatmap-states" class="chart-container"></div>
+    <script type="text/javascript">
+      vegaEmbed("#heatmap-states", "https://raw.githubusercontent.com/BlueberryyyInc/Data-Visualisation-2/master/js/heatmap2.json");
+    </script>
   </section>
 
   <!-- Section 5: Pie Chart - Movement Categories by Year -->
   <section>
-    <div class="row">
-      <div class="chart">
-        <h2>Pie Chart: Movement Categories by Year</h2>
-        <p>This pie chart visualizes the distribution of movement categories, such as short-term and long-term visitors, over the years from 2014 to 2024. The dropdown filter allows for an interactive view of how these categories changed over time.</p>
-        <div id="pie-chart" class="chart-container"></div>
-        <script type="text/javascript">
-          vegaEmbed("#pie-chart", "https://raw.githubusercontent.com/BlueberryyyInc/Data-Visualisation-2/master/js/piechart.json");
-        </script>
-      </div>
-    </div>
+    <h2>Pie Chart: Movement Categories by Year</h2>
+    <p class="description">
+      This pie chart visualizes the distribution of movement categories, such as <strong>short-term and long-term visitors</strong>, from 2014 to 2024. The majority of tourist movement comes from <strong>short-term residents returning</strong> and <strong>long-term visitors</strong>, highlighting a stable pattern of frequent travel into and out of Australia. The data underscores the importance of maintaining efficient <strong>entry and exit processes</strong> and providing support for <strong>long-term visitors</strong> such as students and expatriates. For <strong>business owners</strong> in sectors like accommodation and tourism, these insights can guide offerings toward <strong>longer stays</strong>, such as extended stay packages and student accommodation solutions.
+    </p>
+    <div id="pie-chart" class="chart-container"></div>
+    <script type="text/javascript">
+      vegaEmbed("#pie-chart", "https://raw.githubusercontent.com/BlueberryyyInc/Data-Visualisation-2/master/js/piechart.json");
+    </script>
   </section>
 </main>
 
