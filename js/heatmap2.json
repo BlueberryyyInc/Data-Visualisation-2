@@ -8,7 +8,7 @@
     }
   },
   "width": 800,  
-  "height": 300, 
+  "height": 500, 
   "mark": "rect",
   "encoding": {
     "x": {"field": "Year", "type": "ordinal", "title": "Year"},
