@@ -56,9 +56,12 @@
     </script>
   </section>
 
-  <!-- Section 3: Heatmap - Reasons for Visiting Australia -->
-  <section>
-    <h2>Reasons for Visiting Australia (2014-2024)</h2>
+ <!-- Section 3: Heatmap - Reasons for Visiting Australia -->
+  <section class="heatmap-container">
+    <div class="chart" id="heatmap-reasons"></div>
+    <script type="text/javascript">
+      vegaEmbed("#heatmap-reasons", "https://raw.githubusercontent.com/BlueberryyyInc/Data-Visualisation-2/master/js/heatmap1.json");
+    </script>
     <p class="description">
       This heatmap displays the reasons tourists visited Australia, categorized by their length of stay, from 2014 to 2024. 
       <strong>Holiday travel</strong> stands out as the primary reason, showing a large number of visitors throughout the years, 
@@ -67,15 +70,14 @@
       For instance, the dominance of holidaymakers means that businesses can focus on <strong>leisure-based offerings</strong>,
       while the steady presence of business travelers suggests opportunities for <strong>premium services</strong> and <strong>conference facilities</strong>. 
     </p>
-    <div id="heatmap-reasons" class="chart-container"></div>
-    <script type="text/javascript">
-      vegaEmbed("#heatmap-reasons", "https://raw.githubusercontent.com/BlueberryyyInc/Data-Visualisation-2/master/js/heatmap1.json");
-    </script>
   </section>
-  
-<!-- Section 4: Heatmap - State-Based Tourist Data -->
-  <section>
-    <h2>State-Based Tourist Data (2014-2024)</h2>
+
+  <!-- Section 4: Heatmap - State-Based Tourist Data -->
+  <section class="heatmap-container">
+    <div class="chart" id="heatmap-states"></div>
+    <script type="text/javascript">
+      vegaEmbed("#heatmap-states", "https://raw.githubusercontent.com/BlueberryyyInc/Data-Visualisation-2/master/js/heatmap2.json");
+    </script>
     <p class="description">
       This heatmap shows the total number of tourists visiting each Australian state from 2014 to 2024. 
       <strong>NSW</strong> consistently ranks as the top state for tourist arrivals, followed by <strong>Victoria</strong> and <strong>Queensland</strong>, 
@@ -83,10 +85,6 @@
       indicating areas for potential growth. This data is particularly useful for <strong>tourism boards</strong> looking to promote lesser-known destinations, 
       and for <strong>policymakers</strong> to consider where further investment in infrastructure and marketing could stimulate visitor growth.
     </p>
-    <div id="heatmap-states" class="chart-container"></div>
-    <script type="text/javascript">
-      vegaEmbed("#heatmap-states", "https://raw.githubusercontent.com/BlueberryyyInc/Data-Visualisation-2/master/js/heatmap2.json");
-    </script>
   </section>
 
   <!-- Section 5: Pie Chart - Movement Categories by Year -->
