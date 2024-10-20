@@ -1,11 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {
-    "text": "Grouped Bar Chart: Tourist Comparison by State and Year",
-    "fontSize": 20,
-    "anchor": "start",
-    "color": "navy"
-  },
+  
   "width": 1000,
   "height": 400,
   "data": {
