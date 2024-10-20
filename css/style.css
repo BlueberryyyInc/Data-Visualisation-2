@@ -1,45 +1,51 @@
-/* General Page Styling */
+/* General styling */
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #f7f8fa;
-  color: #333;
   margin: 0;
   padding: 0;
+  background-color: #f4f8fb; /* Light background for contrast */
+  color: #333;
 }
 
-/* Header Styling */
+/* Header styling */
 header {
-  background-color: navy;
+  background-color: #003366; /* Navy blue background */
   color: white;
   padding: 20px;
   text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
 }
 
 header h1 {
-  margin: 0;
   font-size: 36px;
+  margin-bottom: 5px;
 }
 
 header p {
-  margin: 5px 0;
   font-size: 18px;
 }
 
-/* Main Content Styling */
+/* Main content */
 main {
   max-width: 1200px;
-  margin: 20px auto;
-  padding: 20px;
+  margin: 0 auto;
+  padding: 30px 20px;
   background-color: white;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1); /* Light shadow */
 }
 
-/* Section Titles */
-h2 {
-  font-size: 26px;
-  color: navy;
+/* Section styling */
+section {
+  margin-bottom: 50px;
+}
+
+section h2 {
+  font-size: 24px;
+  color: #003366; /* Same as header */
   margin-bottom: 10px;
-  font-weight: bold;
+  border-bottom: 2px solid #ccc; /* Border for separation */
+  padding-bottom: 5px;
 }
 
 p.description {
@@ -47,31 +53,40 @@ p.description {
   color: #555;
   margin-bottom: 20px;
   line-height: 1.6;
+  background-color: #eef5fb; /* Light blue background for descriptions */
+  padding: 15px;
+  border-radius: 5px;
 }
 
-/* Chart Container */
+/* Chart container */
 .chart-container {
   margin: 0 auto;
-  text-align: center;
+  max-width: 1000px;
+  background-color: #fff;
   padding: 20px;
-  background-color: #f2f4f7;
   border-radius: 8px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
 }
 
-/* Responsive Styling */
-@media only screen and (max-width: 768px) {
-  .chart-container {
-    width: 90%;
-  }
-}
-
-/* Footer Styling */
+/* Footer styling */
 footer {
-  background-color: #333;
-  color: #fff;
+  background-color: #003366;
+  color: white;
   padding: 10px;
   text-align: center;
+}
+
+footer p {
+  margin: 0;
   font-size: 14px;
 }
 
+/* Adjusted padding for smaller screens */
+@media (max-width: 768px) {
+  main {
+    padding: 15px;
+  }
+  .chart-container {
+    padding: 10px;
+  }
+}
