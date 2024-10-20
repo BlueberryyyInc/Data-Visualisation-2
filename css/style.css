@@ -3,22 +3,21 @@ body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f8fb; /* Light background for contrast */
+  background-color: #f0f4f7; /* Soft background color */
   color: #333;
 }
 
 /* Header styling */
 header {
-  background-color: #003366; /* Navy blue background */
+  background-color: #003366; /* Navy blue */
   color: white;
-  padding: 20px;
+  padding: 30px 20px;
   text-align: center;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
 }
 
 header h1 {
   font-size: 36px;
-  margin-bottom: 5px;
 }
 
 header p {
@@ -31,7 +30,7 @@ main {
   margin: 0 auto;
   padding: 30px 20px;
   background-color: white;
-  border-radius: 8px; /* Rounded corners */
+  border-radius: 10px; /* Rounded corners */
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1); /* Light shadow */
 }
 
@@ -41,52 +40,64 @@ section {
 }
 
 section h2 {
-  font-size: 24px;
-  color: #003366; /* Same as header */
-  margin-bottom: 10px;
-  border-bottom: 2px solid #ccc; /* Border for separation */
-  padding-bottom: 5px;
+  font-size: 28px;
+  color: #003366;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
 }
 
 p.description {
   font-size: 16px;
   color: #555;
   margin-bottom: 20px;
-  line-height: 1.6;
-  background-color: #eef5fb; /* Light blue background for descriptions */
+  line-height: 1.7;
+  background-color: #eef4f9; /* Soft background for descriptions */
   padding: 15px;
   border-radius: 5px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Slight shadow */
 }
 
 /* Chart container */
 .chart-container {
   margin: 0 auto;
-  max-width: 1000px;
-  background-color: #fff;
   padding: 20px;
+  background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heatmap container with side-by-side text */
+.heatmap-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.heatmap-container .chart {
+  width: 65%; /* Larger chart width */
+}
+
+.heatmap-container .description {
+  width: 30%;
+  margin-left: 20px;
+}
+
+/* Bold and colored text for emphasis */
+strong {
+  color: #d9534f; /* Red for emphasis */
+  font-weight: bold;
 }
 
 /* Footer styling */
 footer {
   background-color: #003366;
   color: white;
-  padding: 10px;
+  padding: 15px;
   text-align: center;
+  font-size: 14px;
 }
 
 footer p {
   margin: 0;
-  font-size: 14px;
-}
-
-/* Adjusted padding for smaller screens */
-@media (max-width: 768px) {
-  main {
-    padding: 15px;
-  }
-  .chart-container {
-    padding: 10px;
-  }
 }
