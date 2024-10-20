@@ -1,12 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {
-    "text": "Tourist Distribution by State (2014-2024)",
-    "fontSize": 24,
-    "fontWeight": "bold",
-    "anchor": "middle",
-    "color": "navy"
-  },
+  
   "width": 700,
   "height": 450,
   "params": [
@@ -49,7 +43,7 @@
       },
       "mark": {
         "type": "geoshape",
-        "fill": "dark-yellow",
+        "fill": "lightblue",
         "stroke": "black"
       },
       "encoding": {
