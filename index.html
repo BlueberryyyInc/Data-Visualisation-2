@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   
   <!-- Link to external CSS file -->
-  <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/BlueberryyyInc/Data-Visualisation-2/master/styles.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
   
   <!-- Vega and Vega-Lite libraries -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
@@ -26,62 +26,72 @@
 <main>
   <!-- Section 1: Tourist Distribution by State -->
   <section>
-    <h2>Tourist Distribution by State (2014-2024)</h2>
-    <p class="description">
-      This map shows the distribution of tourists across Australian states from 2014 to 2024, visualizing regional trends over time.
-    </p>
-    <div id="tourist-map" class="chart-container"></div>
-    <script type="text/javascript">
-      vegaEmbed("#tourist-map", "https://raw.githubusercontent.com/BlueberryyyInc/Data-Visualisation-2/master/js/map1.json");
-    </script>
+    <div class="row">
+      <div class="chart">
+        <h2>Tourist Distribution by State (2014-2024)</h2>
+        <p>This map shows the distribution of tourists across Australian states from 2014 to 2024, visualizing regional trends over time. Larger circles represent higher numbers of tourists in a state, offering insights for tourism boards and policymakers.</p>
+        <div id="tourist-map" class="chart-container"></div>
+        <script type="text/javascript">
+          vegaEmbed("#tourist-map", "https://raw.githubusercontent.com/BlueberryyyInc/Data-Visualisation-2/master/js/map1.json");
+        </script>
+      </div>
+    </div>
   </section>
 
-  <!-- Section 2: Grouped Bar Chart - Tourist Comparison by State and Year -->
+  <!-- Section 2: Grouped Bar Chart -->
   <section>
-    <h2>Grouped Bar Chart: Tourist Comparison by State and Year</h2>
-    <p class="description">
-      This chart compares the number of tourists visiting various Australian states each year from 2014 to 2024.
-    </p>
-    <div id="grouped-bar-chart" class="chart-container"></div>
-    <script type="text/javascript">
-      vegaEmbed("#grouped-bar-chart", "https://raw.githubusercontent.com/BlueberryyyInc/Data-Visualisation-2/master/js/barchart.json");
-    </script>
+    <div class="row">
+      <div class="chart">
+        <h2>Grouped Bar Chart: Tourist Comparison by State and Year</h2>
+        <p>This chart compares the number of tourists visiting various Australian states each year from 2014 to 2024. It provides valuable insights for businesses and local authorities to track state-wise trends and plan accordingly.</p>
+        <div id="grouped-bar-chart" class="chart-container"></div>
+        <script type="text/javascript">
+          vegaEmbed("#grouped-bar-chart", "https://raw.githubusercontent.com/BlueberryyyInc/Data-Visualisation-2/master/js/barchart.json");
+        </script>
+      </div>
+    </div>
   </section>
 
-  <!-- Section 3: Heatmap - Reasons for Visiting Australia -->
+  <!-- Section 3: Heatmap - Reasons for Visiting -->
   <section>
-    <h2>Heatmap: Reasons for Visiting Australia</h2>
-    <p class="description">
-      This heatmap presents the reasons why tourists visited Australia, categorized by their length of stay, between 2014 and 2024.
-    </p>
-    <div id="heatmap-reasons" class="chart-container"></div>
-    <script type="text/javascript">
-      vegaEmbed("#heatmap-reasons", "https://raw.githubusercontent.com/BlueberryyyInc/Data-Visualisation-2/master/js/heatmap1.json");
-    </script>
+    <div class="row">
+      <div class="chart">
+        <h2>Heatmap: Reasons for Visiting Australia</h2>
+        <p>This heatmap displays the reasons tourists visited Australia, categorized by their length of stay, between 2014 and 2024. It provides insights into visitor motivations, helping businesses and tourism stakeholders tailor their offerings.</p>
+        <div id="heatmap-reasons" class="chart-container"></div>
+        <script type="text/javascript">
+          vegaEmbed("#heatmap-reasons", "https://raw.githubusercontent.com/BlueberryyyInc/Data-Visualisation-2/master/js/heatmap1.json");
+        </script>
+      </div>
+    </div>
   </section>
 
   <!-- Section 4: Heatmap - State-Based Tourist Data -->
   <section>
-    <h2>Heatmap: State-Based Tourist Data</h2>
-    <p class="description">
-      This heatmap shows the total number of tourists visiting each Australian state from 2014 to 2024.
-    </p>
-    <div id="heatmap-states" class="chart-container"></div>
-    <script type="text/javascript">
-      vegaEmbed("#heatmap-states", "https://raw.githubusercontent.com/BlueberryyyInc/Data-Visualisation-2/master/js/heatmap2.json");
-    </script>
+    <div class="row">
+      <div class="chart">
+        <h2>Heatmap: State-Based Tourist Data</h2>
+        <p>This heatmap shows the total number of tourists visiting each Australian state from 2014 to 2024. It helps policymakers and tourism boards identify tourism growth trends across regions.</p>
+        <div id="heatmap-states" class="chart-container"></div>
+        <script type="text/javascript">
+          vegaEmbed("#heatmap-states", "https://raw.githubusercontent.com/BlueberryyyInc/Data-Visualisation-2/master/js/heatmap2.json");
+        </script>
+      </div>
+    </div>
   </section>
 
   <!-- Section 5: Pie Chart - Movement Categories by Year -->
   <section>
-    <h2>Pie Chart: Movement Categories by Year</h2>
-    <p class="description">
-      This pie chart breaks down tourist movement categories (short-term and long-term visits) over the years from 2014 to 2024.
-    </p>
-    <div id="pie-chart" class="chart-container"></div>
-    <script type="text/javascript">
-      vegaEmbed("#pie-chart", "https://raw.githubusercontent.com/BlueberryyyInc/Data-Visualisation-2/master/js/piechart.json");
-    </script>
+    <div class="row">
+      <div class="chart">
+        <h2>Pie Chart: Movement Categories by Year</h2>
+        <p>This pie chart visualizes the distribution of movement categories, such as short-term and long-term visitors, over the years from 2014 to 2024. The dropdown filter allows for an interactive view of how these categories changed over time.</p>
+        <div id="pie-chart" class="chart-container"></div>
+        <script type="text/javascript">
+          vegaEmbed("#pie-chart", "https://raw.githubusercontent.com/BlueberryyyInc/Data-Visualisation-2/master/js/piechart.json");
+        </script>
+      </div>
+    </div>
   </section>
 </main>
 
