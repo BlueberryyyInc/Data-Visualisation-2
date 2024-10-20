@@ -9,11 +9,6 @@
   },
   "width": 700,
   "height": 450,
-  "projection": {
-    "type": "mercator",
-    "scale": 700,
-    "center": [133.7751, -25.2744]
-  },
   "params": [
     {
       "name": "year_select",
@@ -23,14 +18,30 @@
         "min": 2014,
         "max": 2024,
         "step": 1,
-        "name": "Select Year"
+        "name": "Select Year: "
+      }
+    },
+    {
+      "name": "zoom_level",
+      "value": 700,
+      "bind": {
+        "input": "range",
+        "min": 300,
+        "max": 1500,
+        "step": 50,
+        "name": "Zoom Level: "
       }
     }
   ],
+  "projection": {
+    "type": "mercator",
+    "scale": {"expr": "zoom_level"},
+    "center": [133.7751, -25.2744]
+  },
   "layer": [
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/BlueberryyyInc/Data-Visualisation-2/master/data/australian-states.geojson",
+        "url": "https://BlueberryyyInc.github.io/Data-Visualisation-2/data/australian-states.geojson",
         "format": {
           "type": "json",
           "property": "features"
@@ -38,7 +49,7 @@
       },
       "mark": {
         "type": "geoshape",
-        "fill": "",
+        "fill": "dark-yellow",
         "stroke": "black"
       },
       "encoding": {
@@ -51,7 +62,7 @@
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/BlueberryyyInc/Data-Visualisation-2/refs/heads/master/data/tourist_count.csv",
+        "url": "https://BlueberryyyInc.github.io/Data-Visualisation-2/data/tourist_count.csv",
         "format": {
           "type": "csv"
         }
@@ -77,16 +88,19 @@
           "scale": {
             "domain": [0, 500000],
             "range": [50, 1200]
+          },
+          "legend": {
+            "title": "Tourist Count"
           }
         },
         "color": {
           "field": "State",
           "type": "nominal",
+          "scale": {
+            "scheme": "category10"
+          },
           "legend": {
             "title": "State"
-          },
-          "scale": {
-            "scheme": "category20"
           }
         },
         "tooltip": [
@@ -113,28 +127,16 @@
         "type": "text",
         "color": "black",
         "fontSize": 12,
-        "fontWeight": "bold"
+        "fontWeight": "bold",
+        "dx": 5,
+        "dy": -5
       },
       "encoding": {
-        "longitude": {
-          "field": "longitude",
-          "type": "quantitative"
-        },
-        "latitude": {
-          "field": "latitude",
-          "type": "quantitative"
-        },
-        "text": {
-          "field": "state",
-          "type": "nominal"
-        }
+        "longitude": { "field": "longitude", "type": "quantitative" },
+        "latitude": { "field": "latitude", "type": "quantitative" },
+        "text": { "field": "state", "type": "nominal" }
       }
     }
   ],
-  "legend": {
-    "title": "Tourist Distribution by State",
-    "orient": "right",
-    "direction": "vertical"
-  },
   "autosize": { "type": "fit", "contains": "padding" }
 }
